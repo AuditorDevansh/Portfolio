@@ -1,0 +1,272 @@
+<!DOCTYPE html><html lang="en" class="scroll-smooth"><head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>contact — Devansh Mishra Salesforce Trailblazer</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://code.iconify.design/iconify-icon/1.0.7/iconify-icon.min.js"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&amp;family=Space+Grotesk:wght@700&amp;display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --acid-green: #ccff00;
+            --electric-purple: #7000ff;
+            --hot-pink: #ff0099;
+            --deep-black: #0a0a0a;
+            --sf-blue: #0070D2;
+            --bouncy: cubic-bezier(0.175, 0.885, 0.32, 1.275);
+        }
+
+        body {
+            font-family: 'DM Sans', sans-serif;
+            background-color: #ffffff;
+            color: var(--deep-black);
+            overflow-x: hidden;
+        }
+
+        h1, h2, h3, h4 {
+            font-family: 'Space Grotesk', sans-serif;
+            letter-spacing: -0.05em;
+        }
+
+        .brutalist-border {
+            border: 4px solid var(--deep-black);
+        }
+
+        .brutalist-shadow {
+            box-shadow: 6px 6px 0px var(--deep-black);
+        }
+
+        .brutalist-shadow-lg {
+            box-shadow: 12px 12px 0px var(--deep-black);
+        }
+
+        .bounce-hover {
+            transition: all 0.4s var(--bouncy);
+        }
+
+        .bounce-hover:hover {
+            transform: scale(1.05) rotate(-1deg);
+        }
+
+        .float {
+            animation: float 6s ease-in-out infinite;
+        }
+
+        @keyframes float {
+            0%, 100% { transform: translateY(0px) rotate(0deg); }
+            50% { transform: translateY(-20px) rotate(5deg); }
+        }
+
+        .gradient-name {
+            background: linear-gradient(135deg, var(--electric-purple), var(--hot-pink), var(--acid-green));
+            background-size: 200% auto;
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            animation: shine 5s linear infinite;
+        }
+
+        @keyframes shine {
+            to { background-position: 200% center; }
+        }
+
+        .sticker-card {
+            position: absolute;
+            z-index: 30;
+            border: 2px solid black;
+            padding: 10px;
+            background: white;
+            border-radius: 12px;
+            box-shadow: 4px 4px 0px black;
+        }
+
+        /* Custom Scrollbar */
+        ::-webkit-scrollbar {
+            width: 12px;
+        }
+        ::-webkit-scrollbar-track {
+            background: white;
+        }
+        ::-webkit-scrollbar-thumb {
+            background: var(--deep-black);
+            border: 2px solid white;
+        }
+
+        .perspective-container {
+            perspective: 1000px;
+        }
+    </style>
+  <style>sd-component { display: block; }</style>
+  <script src="https://cdn.jsdelivr.net/npm/petite-vue@0.4.1/dist/petite-vue.iife.js" defer init></script>
+</head>
+<body>
+    <div class="min-h-screen relative" data-sd-id="1">
+        
+        <!-- Sticky Navigation Pill -->
+        <!-- component: NavigationPill (1b73ece0-76f8-41a0-b097-924237d081c8) -->
+<div v-scope="{ ...{&quot;activeItem&quot;:&quot;index&quot;,&quot;indexHref&quot;:&quot;/index&quot;,&quot;workHref&quot;:&quot;/work&quot;,&quot;aboutHref&quot;:&quot;/about&quot;,&quot;ctaHref&quot;:&quot;mailto:devansh.mishra@trailblazer.com&quot;}, $emit() {} }">
+<nav class="fixed top-8 left-1/2 -translate-x-1/2 z-[100] w-full max-w-xl px-4">
+  <div class="bg-white rounded-full h-14 flex items-center justify-between px-6" style="border: 4px solid #0a0a0a; box-shadow: 6px 6px 0px #0a0a0a;">
+    <div class="flex items-center gap-8 lowercase font-bold">
+      <a :href="indexHref" 
+         class="transition-colors duration-300" 
+         :class="{ 'text-[#ff0099]': activeItem === 'index', 'hover:text-[#ff0099]': activeItem !== 'index' }">index</a>
+      <a :href="workHref" 
+         class="transition-colors duration-300" 
+         :class="{ 'text-[#7000ff]': activeItem === 'work', 'hover:text-[#7000ff]': activeItem !== 'work' }">work</a>
+      <a :href="aboutHref" 
+         class="transition-colors duration-300" 
+         :class="{ 'text-[#ccff00]': activeItem === 'about', 'hover:text-[#ccff00]': activeItem !== 'about' }">about</a>
+    </div>
+    <div class="flex items-center gap-4">
+      <a :href="ctaHref" 
+         class="text-white px-4 py-1.5 text-sm font-black lowercase transition-all hover:scale-105 hover:-rotate-1"
+         style="background-color: #0070D2; border: 4px solid #0a0a0a; transition-duration: 0.4s; transition-timing-function: cubic-bezier(0.175, 0.885, 0.32, 1.275);">
+        hire me
+      </a>
+    </div>
+  </div>
+</nav>
+</div>
+<!-- /component: NavigationPill (1b73ece0-76f8-41a0-b097-924237d081c8) -->
+
+        <!-- Hero / Contact Section -->
+        <section class="min-h-screen bg-[var(--electric-purple)] flex flex-col items-center justify-center relative overflow-hidden pt-24 px-6" data-sd-id="2">
+            <!-- Background Text Pattern -->
+            <div class="absolute inset-0 opacity-[0.05] select-none pointer-events-none flex flex-col justify-between p-4 overflow-hidden" data-sd-id="3">
+                <div class="text-[20vw] font-black leading-none -ml-20 text-white" data-sd-id="4">HIHIHIHIHI</div>
+                <div class="text-[20vw] font-black leading-none -mr-20 text-right text-white" data-sd-id="5">BUILDTHEFUTURE</div>
+            </div>
+
+            <!-- Stickers -->
+            <div class="sticker-card float top-[25%] right-[15%] rotate-[8deg]" style="animation-delay: 0.5s;" data-sd-id="6">
+                <iconify-icon icon="lucide:cloud" class="text-4xl text-[var(--sf-blue)]"></iconify-icon>
+            </div>
+            <div class="sticker-card float bottom-[20%] left-[10%] rotate-[-12deg]" style="animation-delay: 1.2s;" data-sd-id="7">
+                <iconify-icon icon="lucide:zap" class="text-4xl text-[var(--acid-green)]"></iconify-icon>
+            </div>
+            <div class="sticker-card float top-[40%] left-[5%] rotate-[15deg]" style="animation-delay: 2s;" data-sd-id="8">
+                <iconify-icon icon="logos:salesforce" class="text-3xl"></iconify-icon>
+            </div>
+
+            <div class="container mx-auto max-w-5xl text-center z-20" data-sd-id="9">
+                <h1 class="text-7xl md:text-[10vw] font-black text-white leading-none lowercase mb-12" data-sd-id="10">
+                    let's build<br>the <span class="bg-[var(--acid-green)] text-black px-8 brutalist-border rotate-[-2deg] inline-block" data-sd-id="11">future</span>
+                </h1>
+                
+                <div class="flex flex-col items-center gap-12" data-sd-id="12">
+                    <a href="mailto:devansh.mishra@trailblazer.com" id="contact-email-main" class="text-3xl md:text-5xl font-black text-white underline hover:text-[var(--acid-green)] transition-colors bounce-hover break-all px-4" data-sd-id="13">
+                        devansh.mishra@trailblazer.com
+                    </a>
+
+                    <div class="flex flex-wrap justify-center gap-8 mt-4" data-sd-id="14">
+                        <a href="#resume" id="resume-download-btn" class="bg-white text-black text-2xl px-12 py-6 brutalist-border brutalist-shadow-lg font-black bounce-hover lowercase flex items-center gap-4" data-sd-id="15">
+                            <iconify-icon icon="lucide:download"></iconify-icon>
+                            grab my resume
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Social Grid -->
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-8 mt-24" data-sd-id="16">
+                    <a href="#twitter" id="contact-twitter-card" class="bg-[var(--acid-green)] p-8 brutalist-border brutalist-shadow bounce-hover rotate-[-2deg] flex flex-col items-center gap-4 group" data-sd-id="17">
+                        <iconify-icon icon="lucide:twitter" class="text-6xl group-hover:scale-110 transition-transform"></iconify-icon>
+                        <span class="text-2xl font-black lowercase" data-sd-id="18">twitter</span>
+                    </a>
+                    <a href="#github" id="contact-github-card" class="bg-[var(--hot-pink)] p-8 brutalist-border brutalist-shadow bounce-hover rotate-[1deg] flex flex-col items-center gap-4 text-white group" data-sd-id="19">
+                        <iconify-icon icon="lucide:github" class="text-6xl group-hover:scale-110 transition-transform"></iconify-icon>
+                        <span class="text-2xl font-black lowercase" data-sd-id="20">github</span>
+                    </a>
+                    <a href="#linkedin" id="contact-linkedin-card" class="bg-white p-8 brutalist-border brutalist-shadow bounce-hover rotate-[-1deg] flex flex-col items-center gap-4 group" data-sd-id="21">
+                        <iconify-icon icon="lucide:linkedin" class="text-6xl text-[var(--sf-blue)] group-hover:scale-110 transition-transform"></iconify-icon>
+                        <span class="text-2xl font-black lowercase" data-sd-id="22">linkedin</span>
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <!-- Availability Marquee -->
+        <div class="bg-black py-8 border-y-4 border-white rotate-[1.5deg] scale-105 relative z-30 overflow-hidden" data-sd-id="23">
+            <div class="flex gap-12 items-center text-white text-4xl font-black uppercase whitespace-nowrap animate-[marquee_20s_linear_infinite]" data-sd-id="24">
+                <span data-sd-id="25">open for collaborations</span>
+                <iconify-icon icon="lucide:star" class="text-[var(--acid-green)]"></iconify-icon>
+                <span data-sd-id="26">available for freelance</span>
+                <iconify-icon icon="lucide:cloud" class="text-[var(--sf-blue)]"></iconify-icon>
+                <span data-sd-id="27">let's talk agentforce</span>
+                <iconify-icon icon="lucide:zap" class="text-[var(--hot-pink)]"></iconify-icon>
+                <span data-sd-id="28">available globally</span>
+                <iconify-icon icon="lucide:star" class="text-[var(--acid-green)]"></iconify-icon>
+                <!-- Repeat for infinite -->
+                <span data-sd-id="29">open for collaborations</span>
+                <iconify-icon icon="lucide:star" class="text-[var(--acid-green)]"></iconify-icon>
+                <span data-sd-id="30">available for freelance</span>
+                <iconify-icon icon="lucide:cloud" class="text-[var(--sf-blue)]"></iconify-icon>
+                <span data-sd-id="31">let's talk agentforce</span>
+                <iconify-icon icon="lucide:zap" class="text-[var(--hot-pink)]"></iconify-icon>
+                <span data-sd-id="32">available globally</span>
+            </div>
+            <style>
+                @keyframes marquee {
+                    0% { transform: translateX(0); }
+                    100% { transform: translateX(-50%); }
+                }
+            </style>
+        </div>
+
+        <!-- Shared Footer Section -->
+        <!-- component: FooterSection (96434f60-3b0a-4aee-bd19-5f55fcdd71b7) -->
+<div v-scope="{ ...{&quot;twitterHref&quot;:&quot;#&quot;,&quot;githubHref&quot;:&quot;#&quot;,&quot;linkedinHref&quot;:&quot;#&quot;,&quot;workHref&quot;:&quot;#work&quot;,&quot;labHref&quot;:&quot;#lab&quot;,&quot;aboutHref&quot;:&quot;#about&quot;,&quot;contactHref&quot;:&quot;#contact&quot;}, $emit() {} }">
+<footer class="bg-white border-t-[8px] border-black py-20 px-6 relative">
+  <div class="absolute top-0 right-0 w-1/2 h-full opacity-[0.05] pointer-events-none select-none text-[20vw] font-black leading-none overflow-hidden">
+    CLOUD
+  </div>
+  <div class="container mx-auto">
+    <div class="flex flex-col md:flex-row justify-between items-start md:items-end gap-12">
+      <div class="space-y-6 relative z-10">
+        <div class="text-5xl font-black lowercase" style="background: linear-gradient(135deg, #7000ff, #ff0099, #ccff00); background-size: 200% auto; -webkit-background-clip: text; -webkit-text-fill-color: transparent;">Devansh Mishra.</div>
+        <p class="max-w-xs text-xl font-bold lowercase opacity-70">building intelligent clouds, one badge at a time.</p>
+        <div class="flex gap-6">
+          <a :href="twitterHref" class="w-12 h-12 border-[4px] border-black flex items-center justify-center transition-all duration-400 ease-[cubic-bezier(0.175,0.885,0.32,1.275)] hover:scale-105 hover:-rotate-1 bg-[#ccff00]">
+            <iconify-icon icon="lucide:twitter"></iconify-icon>
+          </a>
+          <a :href="githubHref" class="w-12 h-12 border-[4px] border-black flex items-center justify-center transition-all duration-400 ease-[cubic-bezier(0.175,0.885,0.32,1.275)] hover:scale-105 hover:-rotate-1 bg-[#ff0099]">
+            <iconify-icon icon="lucide:github"></iconify-icon>
+          </a>
+          <a :href="linkedinHref" class="w-12 h-12 border-[4px] border-black flex items-center justify-center transition-all duration-400 ease-[cubic-bezier(0.175,0.885,0.32,1.275)] hover:scale-105 hover:-rotate-1 bg-[#7000ff]">
+            <iconify-icon icon="lucide:linkedin" class="text-white"></iconify-icon>
+          </a>
+        </div>
+      </div>
+      <div class="flex flex-col text-right font-black lowercase text-2xl md:text-4xl">
+        <a :href="workHref" class="hover:underline text-[#ff0099]">work</a>
+        <a :href="labHref" class="hover:underline text-[#ccff00]">the lab</a>
+        <a :href="aboutHref" class="hover:underline text-[#7000ff]">me</a>
+        <a :href="contactHref" class="hover:underline">hi</a>
+      </div>
+    </div>
+    <div class="mt-20 pt-8 border-t-[4px] border-black flex justify-between items-center lowercase font-bold">
+      <p>© 2024 trailblazer labs</p>
+      <p>building intelligent clouds.</p>
+    </div>
+  </div>
+</footer>
+</div>
+<!-- /component: FooterSection (96434f60-3b0a-4aee-bd19-5f55fcdd71b7) -->
+
+    </div>
+
+    <!-- Global Floating Stickers -->
+    <div class="fixed inset-0 pointer-events-none z-[80] overflow-hidden" data-sd-id="33">
+        <div class="sticker-card float absolute top-[10%] left-[20%] rotate-[15deg]" style="animation-duration: 8s;" data-sd-id="34">
+            <iconify-icon icon="noto:sparkles" class="text-2xl"></iconify-icon>
+        </div>
+        <div class="sticker-card float absolute bottom-[15%] right-[10%] rotate-[-10deg]" style="animation-duration: 10s; animation-delay: 3s;" data-sd-id="35">
+            <iconify-icon icon="noto:rocket" class="text-2xl"></iconify-icon>
+        </div>
+        <div class="sticker-card float absolute top-[60%] right-[5%] rotate-[20deg]" style="animation-duration: 7s; animation-delay: 1s;" data-sd-id="36">
+            <iconify-icon icon="noto:cloud" class="text-2xl"></iconify-icon>
+        </div>
+    </div>
+
+
+</body></html>

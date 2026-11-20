@@ -1,0 +1,97 @@
+export const profile = {
+  name: "Devansh Mishra",
+  title: "Salesforce Admin & Developer",
+  location: "Khatauli, Uttar Pradesh, India",
+  email: "auditor.devansh.in@gmail.com",
+  linkedin: "https://www.linkedin.com/in/devanshmishra29",
+  trailblazer: "https://www.salesforce.com/trailblazer/devanshm29",
+  summary:
+    "I enjoy figuring out how things work, finding ways to make them better, and automating things that shouldn't have to be done manually. I'm a BCA graduate currently pursuing my MCA, interested in building practical solutions at the intersection of software development, business processes, and cloud technologies.",
+  projects: [
+    {
+      number: "01",
+      title: "Recruitment Management Solution",
+      description:
+        "Streamlining recruitment workflows and candidate management.",
+      tags: ["Salesforce", "CRM", "Automation"],
+      color: "lime",
+    },
+    {
+      number: "02",
+      title: "Project Management App",
+      description: "Automating task management and deliverable tracking.",
+      tags: ["Salesforce", "Flow Builder", "Custom objects"],
+      color: "pink",
+    },
+    {
+      number: "03",
+      title: "Salesforce + Slack Integration",
+      description:
+        "Exploring conversational CRM interactions through MCP integrations.",
+      tags: ["Salesforce", "Slack", "MCP"],
+      color: "purple",
+    },
+    {
+      number: "04",
+      title: "Content Cloud Project",
+      description: "Currently working on a Content Cloud project.",
+      tags: ["Salesforce", "Content Cloud", "Ongoing"],
+      color: "lime",
+    },
+  ],
+  experience: [
+    {
+      title: "Winter Training Program",
+      company: "Astra IT",
+      dates: "Ongoing",
+      location: "",
+      description: "",
+    },
+    {
+      title: "Community Volunteer",
+      company: "Salesforce Architect Group",
+      dates: "October 2026 – Present",
+      location: "Noida, Uttar Pradesh, India",
+      description:
+        "Supporting meetups, workshops, speaker coordination, member engagement, knowledge sharing, and event operations.",
+    },
+    {
+      title: "Customer Success & CRM Support",
+      company: "iEnergizer",
+      dates: "September 2025 – February 2026",
+      location: "Noida, Uttar Pradesh, India",
+      description: "",
+    },
+    {
+      title: "Sales Associate",
+      company: "Hike Education",
+      dates: "July 2025 – August 2025",
+      location: "Gurugram, Haryana, India",
+      description: "",
+    },
+  ],
+  skills: [
+    "Salesforce Administration",
+    "Flow Builder",
+    "Data Modeling",
+    "Apex",
+    "SOQL / SOSL",
+    "Lightning Web Components",
+    "Agentforce",
+    "MCP Integrations",
+    "Python",
+    "C",
+    "Java",
+    "Linux",
+    "Git",
+    "Azure (AZ-900)",
+    "AWS Fundamentals",
+  ],
+  certifications: [
+    "Introduction to Cloud Computing",
+    "Python",
+    "Introduction to Machine Learning",
+    "Certified Secured Computer User",
+    "Ethical Hacking",
+  ],
+} as const;

@@ -1,0 +1,474 @@
+<!DOCTYPE html><html lang="en" class="scroll-smooth"><head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>cloud — Salesforce portfolio of Devansh Mishra</title>
+    <meta name="view-transition" content="same-origin">
+    <link rel="prefetch" href="https://draft-024fa53b-cd6d-4476-a035-2d6b3dea0cc4.preview.superdesign.dev" as="document">
+    <link rel="prefetch" href="https://draft-96072043-63d0-4845-bb97-05642cef53b2.preview.superdesign.dev" as="document">
+    <link rel="prefetch" href="https://draft-30fbd73e-6ed1-498c-bae7-ec25f3b9cf4b.preview.superdesign.dev" as="document">
+    <link rel="prefetch" href="https://draft-29193a08-2801-4335-b0db-72b3a8ca571c.preview.superdesign.dev" as="document">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://code.iconify.design/iconify-icon/1.0.7/iconify-icon.min.js"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&amp;family=Space+Grotesk:wght@700&amp;display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --acid-green: #ccff00;
+            --electric-purple: #7000ff;
+            --hot-pink: #ff0099;
+            --deep-black: #0a0a0a;
+            --sf-blue: #0070D2;
+            --bouncy: cubic-bezier(0.175, 0.885, 0.32, 1.275);
+        }
+
+        body {
+            font-family: 'DM Sans', sans-serif;
+            background-color: #ffffff;
+            color: var(--deep-black);
+            overflow-x: hidden;
+        }
+
+        h1, h2, h3, h4 {
+            font-family: 'Space Grotesk', sans-serif;
+            letter-spacing: -0.05em;
+        }
+
+        .brutalist-border {
+            border: 4px solid var(--deep-black);
+        }
+
+        .brutalist-shadow {
+            box-shadow: 6px 6px 0px var(--deep-black);
+        }
+
+        .brutalist-shadow-lg {
+            box-shadow: 12px 12px 0px var(--deep-black);
+        }
+
+        .bounce-hover {
+            transition: all 0.4s var(--bouncy);
+        }
+
+        .bounce-hover:hover {
+            transform: scale(1.05) rotate(-1deg);
+        }
+
+        .float {
+            animation: float 6s ease-in-out infinite;
+        }
+
+        @keyframes float {
+            0%, 100% { transform: translateY(0px) rotate(0deg); }
+            50% { transform: translateY(-20px) rotate(5deg); }
+        }
+
+        .marquee-container {
+            overflow: hidden;
+            white-space: nowrap;
+            display: flex;
+        }
+
+        .marquee-content {
+            display: flex;
+            animation: marquee 30s linear infinite;
+        }
+
+        @keyframes marquee {
+            0% { transform: translateX(0); }
+            100% { transform: translateX(-50%); }
+        }
+
+        .gradient-name {
+            background: linear-gradient(135deg, var(--electric-purple), var(--hot-pink), var(--acid-green));
+            background-size: 200% auto;
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            animation: shine 5s linear infinite;
+        }
+
+        @keyframes shine {
+            to { background-position: 200% center; }
+        }
+
+        .sticker-card {
+            position: absolute;
+            z-index: 30;
+            border: 2px solid black;
+            padding: 10px;
+            background: white;
+            border-radius: 12px;
+            box-shadow: 4px 4px 0px black;
+        }
+
+        .project-card {
+            transition: transform 0.4s var(--bouncy);
+        }
+
+        .project-card:hover {
+            z-index: 40;
+            transform: scale(1.02) rotate(0deg) !important;
+        }
+
+        /* Perspective for the 3D-ish feel */
+        .perspective-container {
+            perspective: 1000px;
+        }
+
+        /* View Transitions */
+        html { background-color: #ffffff; }
+        @view-transition { navigation: auto; }
+        ::view-transition { background-color: #ffffff; }
+
+        nav { view-transition-name: main-nav; }
+        footer { view-transition-name: main-footer; }
+        main { view-transition-name: main-content; }
+
+        ::view-transition-old(main-nav),
+        ::view-transition-new(main-nav),
+        ::view-transition-old(main-footer),
+        ::view-transition-new(main-footer) {
+            animation: none;
+            mix-blend-mode: normal;
+        }
+
+        ::view-transition-old(main-content) {
+            animation: 0.25s ease-out both fade-out;
+        }
+        ::view-transition-new(main-content) {
+            animation: 0.25s ease-in 0.1s both fade-in;
+        }
+
+        @keyframes fade-out { from { opacity: 1; } to { opacity: 0; } }
+        @keyframes fade-in { from { opacity: 0; } to { opacity: 1; } }
+
+        /* Custom Scrollbar */
+        ::-webkit-scrollbar {
+            width: 12px;
+        }
+        ::-webkit-scrollbar-track {
+            background: white;
+        }
+        ::-webkit-scrollbar-thumb {
+            background: var(--deep-black);
+            border: 2px solid white;
+        }
+    </style>
+  <style>sd-component { display: block; }</style>
+  <script src="https://cdn.jsdelivr.net/npm/petite-vue@0.4.1/dist/petite-vue.iife.js" defer init></script>
+</head>
+<body>
+    <div class="min-h-screen relative" data-sd-id="1">
+        
+        <!-- Global Nav Pill -->
+        <!-- component: NavigationPill (1b73ece0-76f8-41a0-b097-924237d081c8) -->
+<div v-scope="{ ...{&quot;activeItem&quot;:&quot;index&quot;,&quot;indexHref&quot;:&quot;https://draft-024fa53b-cd6d-4476-a035-2d6b3dea0cc4.preview.superdesign.dev&quot;,&quot;workHref&quot;:&quot;https://draft-96072043-63d0-4845-bb97-05642cef53b2.preview.superdesign.dev&quot;,&quot;aboutHref&quot;:&quot;https://draft-29193a08-2801-4335-b0db-72b3a8ca571c.preview.superdesign.dev&quot;,&quot;ctaHref&quot;:&quot;https://draft-29193a08-2801-4335-b0db-72b3a8ca571c.preview.superdesign.dev&quot;}, $emit() {} }">
+<nav class="fixed top-8 left-1/2 -translate-x-1/2 z-[100] w-full max-w-xl px-4">
+  <div class="bg-white rounded-full h-14 flex items-center justify-between px-6" style="border: 4px solid #0a0a0a; box-shadow: 6px 6px 0px #0a0a0a;">
+    <div class="flex items-center gap-8 lowercase font-bold">
+      <a :href="indexHref" 
+         class="transition-colors duration-300" 
+         :class="{ 'text-[#ff0099]': activeItem === 'index', 'hover:text-[#ff0099]': activeItem !== 'index' }">index</a>
+      <a :href="workHref" 
+         class="transition-colors duration-300" 
+         :class="{ 'text-[#7000ff]': activeItem === 'work', 'hover:text-[#7000ff]': activeItem !== 'work' }">work</a>
+      <a :href="aboutHref" 
+         class="transition-colors duration-300" 
+         :class="{ 'text-[#ccff00]': activeItem === 'about', 'hover:text-[#ccff00]': activeItem !== 'about' }">about</a>
+    </div>
+    <div class="flex items-center gap-4">
+      <a :href="ctaHref" 
+         class="text-white px-4 py-1.5 text-sm font-black lowercase transition-all hover:scale-105 hover:-rotate-1"
+         style="background-color: #0070D2; border: 4px solid #0a0a0a; transition-duration: 0.4s; transition-timing-function: cubic-bezier(0.175, 0.885, 0.32, 1.275);">
+        hire me
+      </a>
+    </div>
+  </div>
+</nav>
+</div>
+<!-- /component: NavigationPill (1b73ece0-76f8-41a0-b097-924237d081c8) -->
+
+        <!-- Hero Section -->
+        <section class="h-screen flex flex-col items-center justify-center relative bg-white overflow-hidden" data-sd-id="10">
+            <!-- Background Text Pattern -->
+            <div class="absolute inset-0 opacity-[0.03] select-none pointer-events-none flex flex-col justify-between p-4 overflow-hidden" data-sd-id="11">
+                <div class="text-[20vw] font-black leading-none -ml-20" data-sd-id="12">AGENTFORCEAGENTFORCE</div>
+                <div class="text-[20vw] font-black leading-none -mr-20 text-right" data-sd-id="13">TRAILBLAZERTRAILBLAZER</div>
+            </div>
+
+            <!-- Stickers -->
+            <div class="sticker-card float top-[20%] left-[10%] rotate-[-12deg]" style="animation-delay: 0.2s;" data-sd-id="14">
+                <iconify-icon icon="logos:salesforce" class="text-4xl"></iconify-icon>
+            </div>
+            <div class="sticker-card float bottom-[25%] right-[15%] rotate-[15deg]" style="animation-delay: 1s;" data-sd-id="15">
+                <iconify-icon icon="lucide:cloud" class="text-4xl"></iconify-icon>
+            </div>
+            <div class="sticker-card float top-[30%] right-[10%] rotate-[8deg]" style="animation-delay: 2.5s;" data-sd-id="16">
+                <span class="font-bold text-xs lowercase" data-sd-id="17">available for work</span>
+            </div>
+
+            <div class="container mx-auto px-6 text-center z-20" data-sd-id="18">
+                <span class="bg-[var(--sf-blue)] text-white px-6 py-2 brutalist-border brutalist-shadow font-bold lowercase text-xl inline-block mb-8 rotate-[-2deg]" data-sd-id="19">Agentforce Champion + Ranger</span>
+                <h1 class="text-[12vw] font-black leading-[0.8] mb-8 gradient-name" data-sd-id="20">
+                    Devansh<br>Mishra
+                </h1>
+                <p class="text-2xl md:text-3xl max-w-2xl mx-auto font-medium lowercase" data-sd-id="21">
+                    Salesforce Trailblazer crafting intelligent cloud solutions. 117 badges. Agentforce Champion. Building the future of enterprise AI.
+                </p>
+                <div class="mt-12 flex justify-center gap-6" data-sd-id="22">
+                    <div class="w-16 h-16 bg-black text-white brutalist-border rounded-full flex items-center justify-center bounce-hover cursor-pointer" data-sd-id="23">
+                        <iconify-icon icon="lucide:arrow-down" class="text-3xl"></iconify-icon>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Stats Counter Section -->
+        <section class="bg-black py-20 border-y-8 border-[var(--acid-green)] relative z-30" data-sd-id="24">
+            <div class="container mx-auto px-6 grid grid-cols-1 md:grid-cols-3 gap-12 text-white" data-sd-id="25">
+                <div class="text-center group" data-sd-id="26">
+                    <div class="text-8xl font-black text-[var(--acid-green)] mb-2 group-hover:scale-110 transition-transform" data-sd-id="27">117</div>
+                    <div class="text-2xl font-bold lowercase" data-sd-id="28">badges earned</div>
+                </div>
+                <div class="text-center group" data-sd-id="29">
+                    <div class="text-8xl font-black text-[var(--hot-pink)] mb-2 group-hover:scale-110 transition-transform" data-sd-id="30">02</div>
+                    <div class="text-2xl font-bold lowercase" data-sd-id="31">superbadges</div>
+                </div>
+                <div class="text-center group" data-sd-id="32">
+                    <div class="text-8xl font-black text-[var(--electric-purple)] mb-2 group-hover:scale-110 transition-transform" data-sd-id="33">69k</div>
+                    <div class="text-2xl font-bold lowercase" data-sd-id="34">trailhead points</div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Marquee -->
+        <div class="bg-[var(--hot-pink)] border-b-4 border-black py-6 relative z-30" data-sd-id="35">
+            <div class="marquee-container" data-sd-id="36">
+                <div class="marquee-content gap-12 items-center flex" data-sd-id="37">
+                    <span class="text-4xl font-black text-white uppercase italic" data-sd-id="38">cloud architecture</span>
+                    <iconify-icon icon="lucide:zap" class="text-4xl text-black"></iconify-icon>
+                    <span class="text-4xl font-black text-white uppercase italic" data-sd-id="39">salesforce design</span>
+                    <iconify-icon icon="lucide:zap" class="text-4xl text-black"></iconify-icon>
+                    <span class="text-4xl font-black text-white uppercase italic" data-sd-id="40">enterprise ui/ux</span>
+                    <iconify-icon icon="lucide:zap" class="text-4xl text-black"></iconify-icon>
+                    <span class="text-4xl font-black text-white uppercase italic" data-sd-id="41">customer success design</span>
+                    <iconify-icon icon="lucide:zap" class="text-4xl text-black"></iconify-icon>
+                    <!-- Repeat -->
+                    <span class="text-4xl font-black text-white uppercase italic" data-sd-id="42">design systems</span>
+                    <iconify-icon icon="lucide:zap" class="text-4xl text-black"></iconify-icon>
+                    <span class="text-4xl font-black text-white uppercase italic" data-sd-id="43">interactive web</span>
+                    <iconify-icon icon="lucide:zap" class="text-4xl text-black"></iconify-icon>
+                    <span class="text-4xl font-black text-white uppercase italic" data-sd-id="44">motion branding</span>
+                    <iconify-icon icon="lucide:zap" class="text-4xl text-black"></iconify-icon>
+                    <span class="text-4xl font-black text-white uppercase italic" data-sd-id="45">pixel perfection</span>
+                    <iconify-icon icon="lucide:zap" class="text-4xl text-black"></iconify-icon>
+                </div>
+            </div>
+        </div>
+
+        <!-- Work Section (Asymmetrical Overlapping Cards) -->
+        <section id="work" class="py-32 bg-white px-6 overflow-hidden relative" data-sd-id="46">
+            <div class="container mx-auto" data-sd-id="47">
+                <div class="flex flex-col md:flex-row justify-between items-end mb-24 gap-8" data-sd-id="48">
+                    <h2 class="text-8xl md:text-9xl font-black lowercase leading-none" data-sd-id="49">selected<br><span class="text-[var(--sf-blue)]" data-sd-id="50">solutions.</span></h2>
+                    <p class="max-w-xs text-xl font-medium lowercase pb-2" data-sd-id="51">a collection of things i broke and then fixed to look like this.</p>
+                </div>
+
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-y-32 gap-x-12 relative" data-sd-id="52">
+                    <!-- Project Card 1 -->
+                    <div class="project-card brutalist-border brutalist-shadow-lg bg-[var(--acid-green)] p-6 rounded-[2rem] rotate-[-4deg] md:translate-y-12" data-sd-id="53">
+                        <div class="bg-black aspect-video rounded-xl mb-6 flex items-center justify-center overflow-hidden" data-sd-id="54">
+                            <iconify-icon icon="lucide:layout" class="text-8xl text-white opacity-20"></iconify-icon>
+                        </div>
+                        <h3 class="text-5xl font-black lowercase mb-4" data-sd-id="55">Einstein AI Integration</h3>
+                        <p class="text-xl mb-6 lowercase font-medium" data-sd-id="56">Designing intelligent agent workflows with Prompt Builder templates for enterprise automation.</p>
+                        <div class="flex gap-4" data-sd-id="57">
+                            <span class="px-4 py-1 bg-white brutalist-border rounded-full font-bold lowercase text-sm" data-sd-id="58">Lightning</span>
+                            <span class="px-4 py-1 bg-white brutalist-border rounded-full font-bold lowercase text-sm" data-sd-id="59">LWC</span>
+                        </div>
+                    </div>
+
+                    <!-- Project Card 2 -->
+                    <div class="project-card brutalist-border brutalist-shadow-lg bg-[var(--hot-pink)] p-6 rounded-[2rem] rotate-[3deg] md:-translate-y-12" data-sd-id="60">
+                        <div class="bg-black aspect-video rounded-xl mb-6 flex items-center justify-center overflow-hidden" data-sd-id="61">
+                            <iconify-icon icon="lucide:music" class="text-8xl text-white opacity-20"></iconify-icon>
+                        </div>
+                        <h3 class="text-5xl font-black lowercase mb-4 text-white" data-sd-id="62">Platform Administration</h3>
+                        <p class="text-xl mb-6 lowercase font-medium text-white" data-sd-id="63">Building scalable access control and sharing solutions for complex multi-org environments.</p>
+                        <div class="flex gap-4" data-sd-id="64">
+                            <span class="px-4 py-1 bg-white brutalist-border rounded-full font-bold lowercase text-sm" data-sd-id="65">Data Viz</span>
+                            <span class="px-4 py-1 bg-white brutalist-border rounded-full font-bold lowercase text-sm" data-sd-id="66">Einstein</span>
+                        </div>
+                    </div>
+
+                    <!-- Project Card 3 -->
+                    <div class="project-card brutalist-border brutalist-shadow-lg bg-[var(--electric-purple)] p-6 rounded-[2rem] rotate-[-2deg] md:col-span-2 max-w-4xl mx-auto w-full" data-sd-id="67">
+                        <div class="grid md:grid-cols-2 gap-8 items-center" data-sd-id="68">
+                            <div class="bg-black h-80 rounded-xl flex items-center justify-center overflow-hidden" data-sd-id="69">
+                                <iconify-icon icon="lucide:shopping-bag" class="text-8xl text-white opacity-20"></iconify-icon>
+                            </div>
+                            <div class="text-white" data-sd-id="70">
+                                <h3 class="text-5xl font-black lowercase mb-4" data-sd-id="71">Agentforce Solutions</h3>
+                                <p class="text-xl mb-6 lowercase font-medium" data-sd-id="72">Architecting conversational AI agents for enterprise sales and service cloud ecosystems.</p>
+                                <div class="flex gap-4 mb-8" data-sd-id="73">
+                                    <span class="px-4 py-1 bg-white text-black brutalist-border rounded-full font-bold lowercase text-sm" data-sd-id="74">B2C</span>
+                                    <span class="px-4 py-1 bg-white text-black brutalist-border rounded-full font-bold lowercase text-sm" data-sd-id="75">Sales Cloud</span>
+                                </div>
+                                <button class="w-full bg-[var(--acid-green)] text-black font-black py-4 brutalist-border brutalist-shadow bounce-hover lowercase text-2xl" data-sd-id="76">view live site</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Testimonials Carousel -->
+        <section class="py-32 bg-[#f0f0f0] px-6" data-sd-id="77">
+            <div class="container mx-auto" data-sd-id="78">
+                <h2 class="text-6xl font-black text-center mb-20 lowercase" data-sd-id="79">what the <span class="text-[var(--hot-pink)]" data-sd-id="80">streets</span> say</h2>
+                
+                <div class="flex flex-wrap justify-center gap-8" data-sd-id="81">
+                    <div class="max-w-sm bg-white brutalist-border brutalist-shadow p-8 rounded-3xl rotate-[-1deg] bounce-hover" data-sd-id="82">
+                        <div class="flex gap-1 mb-4" data-sd-id="83">
+                            <iconify-icon icon="lucide:star" class="text-[var(--acid-green)] fill-[var(--acid-green)]"></iconify-icon>
+                            <iconify-icon icon="lucide:star" class="text-[var(--acid-green)] fill-[var(--acid-green)]"></iconify-icon>
+                            <iconify-icon icon="lucide:star" class="text-[var(--acid-green)] fill-[var(--acid-green)]"></iconify-icon>
+                            <iconify-icon icon="lucide:star" class="text-[var(--acid-green)] fill-[var(--acid-green)]"></iconify-icon>
+                            <iconify-icon icon="lucide:star" class="text-[var(--acid-green)] fill-[var(--acid-green)]"></iconify-icon>
+                        </div>
+                        <p class="text-lg italic mb-6 lowercase font-medium" data-sd-id="84">"devansh's admin skills are next level. he automated our entire lead flow and secured our data architecture in record time."</p>
+                        <div class="flex items-center gap-4" data-sd-id="85">
+                            <div class="w-12 h-12 bg-black rounded-full" data-sd-id="86"></div>
+                            <div data-sd-id="87">
+                                <div class="font-bold lowercase" data-sd-id="88">sarah j.</div>
+                                <div class="text-sm opacity-60 lowercase" data-sd-id="89">ceo @ hypercube</div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="max-w-sm bg-black text-white brutalist-border brutalist-shadow p-8 rounded-3xl rotate-[2deg] bounce-hover" data-sd-id="90">
+                        <div class="flex gap-1 mb-4" data-sd-id="91">
+                            <iconify-icon icon="lucide:star" class="text-[var(--hot-pink)] fill-[var(--hot-pink)]"></iconify-icon>
+                            <iconify-icon icon="lucide:star" class="text-[var(--hot-pink)] fill-[var(--hot-pink)]"></iconify-icon>
+                            <iconify-icon icon="lucide:star" class="text-[var(--hot-pink)] fill-[var(--hot-pink)]"></iconify-icon>
+                            <iconify-icon icon="lucide:star" class="text-[var(--hot-pink)] fill-[var(--hot-pink)]"></iconify-icon>
+                            <iconify-icon icon="lucide:star" class="text-[var(--hot-pink)] fill-[var(--hot-pink)]"></iconify-icon>
+                        </div>
+                        <p class="text-lg italic mb-6 lowercase font-medium" data-sd-id="92">"his knowledge of agentforce and prompt builder is incredible. he's not just a trailblazer, he's a true ecosystem champion."</p>
+                        <div class="flex items-center gap-4" data-sd-id="93">
+                            <div class="w-12 h-12 bg-[var(--electric-purple)] rounded-full" data-sd-id="94"></div>
+                            <div data-sd-id="95">
+                                <div class="font-bold lowercase" data-sd-id="96">mike t.</div>
+                                <div class="text-sm opacity-60 lowercase" data-sd-id="97">design lead @ flow</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Final CTA -->
+        <section id="contact" class="bg-[var(--electric-purple)] py-48 px-6 relative overflow-hidden" data-sd-id="98">
+            <div class="sticker-card float top-20 left-20 text-4xl" data-sd-id="99">🤙</div>
+            <div class="sticker-card float bottom-20 right-20 text-4xl" data-sd-id="100">🚀</div>
+            
+            <div class="container mx-auto text-center relative z-10" data-sd-id="101">
+                <h2 class="text-8xl md:text-[12vw] font-black text-white leading-none mb-12 lowercase" data-sd-id="102">
+                    let's build<br>the <span class="bg-[var(--acid-green)] text-black px-6 brutalist-border rotate-[-3deg] inline-block" data-sd-id="103">future</span>
+                </h2>
+                <div class="flex flex-col items-center gap-8" data-sd-id="104">
+                    <a href="mailto:devansh.mishra@salesforce-trailblazer.com" id="cta-mail" class="text-3xl md:text-5xl font-black text-white underline hover:text-[var(--acid-green)] transition-colors" data-sd-id="105">devansh.mishra@trailblazer.com</a>
+                    <button class="bg-white text-black text-2xl px-12 py-6 brutalist-border brutalist-shadow-lg font-black bounce-hover lowercase mt-4" data-sd-id="106">grab my resume</button>
+                </div>
+            </div>
+        </section>
+
+        <main>
+    <!-- (Existing sections are wrapped here) -->
+             <!-- Background Texture -->
+             <div class="absolute top-0 right-0 w-1/2 h-full opacity-[0.05] pointer-events-none select-none text-[20vw] font-black leading-none overflow-hidden" data-sd-id="108">
+                CLOUD
+            </div>
+
+            <div class="container mx-auto" data-sd-id="109">
+                <div class="flex flex-col md:flex-row justify-between items-start md:items-end gap-12" data-sd-id="110">
+                    <div class="space-y-6 relative z-10" data-sd-id="111">
+                        <div class="text-5xl font-black lowercase gradient-name" data-sd-id="112">Devansh Mishra.</div>
+                        <p class="max-w-xs text-xl font-bold lowercase opacity-70" data-sd-id="113">building intelligent clouds, one badge at a time.</p>
+                        <div class="flex gap-6" data-sd-id="114">
+                            <a href="#" id="social-tw" class="w-12 h-12 brutalist-border flex items-center justify-center bounce-hover bg-[var(--acid-green)]" data-sd-id="115"><iconify-icon icon="lucide:twitter"></iconify-icon></a>
+                            <a href="#" id="social-gh" class="w-12 h-12 brutalist-border flex items-center justify-center bounce-hover bg-[var(--hot-pink)]" data-sd-id="116"><iconify-icon icon="lucide:github"></iconify-icon></a>
+                            <a href="#" id="social-li" class="w-12 h-12 brutalist-border flex items-center justify-center bounce-hover bg-[var(--electric-purple)]" data-sd-id="117"><iconify-icon icon="lucide:linkedin" class="text-white"></iconify-icon></a>
+                        </div>
+                    </div>
+
+                    <div class="flex flex-col text-right font-black lowercase text-2xl md:text-4xl" data-sd-id="118">
+                        <a href="#" id="f-work" class="hover:underline text-[var(--hot-pink)]" data-sd-id="119">work</a>
+                        <a href="#" id="f-lab" class="hover:underline text-[var(--acid-green)]" data-sd-id="120">the lab</a>
+                        <a href="#" id="f-about" class="hover:underline text-[var(--electric-purple)]" data-sd-id="121">me</a>
+                        <a href="#" id="f-contact" class="hover:underline" data-sd-id="122">hi</a>
+                    </div>
+                </div>
+                <div class="mt-20 pt-8 border-t-4 border-black flex justify-between items-center lowercase font-bold" data-sd-id="123">
+                    <p data-sd-id="124">© 2024 trailblazer labs</p>
+                    <p data-sd-id="125">stay chaotic.</p>
+                </div>
+            </div>
+        </main>
+        <!-- Footer -->
+        <!-- component: FooterSection (96434f60-3b0a-4aee-bd19-5f55fcdd71b7) -->
+<div v-scope="{ ...{&quot;twitterHref&quot;:&quot;#&quot;,&quot;githubHref&quot;:&quot;#&quot;,&quot;linkedinHref&quot;:&quot;#&quot;,&quot;workHref&quot;:&quot;https://draft-96072043-63d0-4845-bb97-05642cef53b2.preview.superdesign.dev&quot;,&quot;labHref&quot;:&quot;https://draft-30fbd73e-6ed1-498c-bae7-ec25f3b9cf4b.preview.superdesign.dev&quot;,&quot;aboutHref&quot;:&quot;https://draft-29193a08-2801-4335-b0db-72b3a8ca571c.preview.superdesign.dev&quot;,&quot;contactHref&quot;:&quot;https://draft-29193a08-2801-4335-b0db-72b3a8ca571c.preview.superdesign.dev&quot;}, $emit() {} }">
+<footer class="bg-white border-t-[8px] border-black py-20 px-6 relative">
+  <div class="absolute top-0 right-0 w-1/2 h-full opacity-[0.05] pointer-events-none select-none text-[20vw] font-black leading-none overflow-hidden">
+    CLOUD
+  </div>
+  <div class="container mx-auto">
+    <div class="flex flex-col md:flex-row justify-between items-start md:items-end gap-12">
+      <div class="space-y-6 relative z-10">
+        <div class="text-5xl font-black lowercase" style="background: linear-gradient(135deg, #7000ff, #ff0099, #ccff00); background-size: 200% auto; -webkit-background-clip: text; -webkit-text-fill-color: transparent;">Devansh Mishra.</div>
+        <p class="max-w-xs text-xl font-bold lowercase opacity-70">building intelligent clouds, one badge at a time.</p>
+        <div class="flex gap-6">
+          <a :href="twitterHref" class="w-12 h-12 border-[4px] border-black flex items-center justify-center transition-all duration-400 ease-[cubic-bezier(0.175,0.885,0.32,1.275)] hover:scale-105 hover:-rotate-1 bg-[#ccff00]">
+            <iconify-icon icon="lucide:twitter"></iconify-icon>
+          </a>
+          <a :href="githubHref" class="w-12 h-12 border-[4px] border-black flex items-center justify-center transition-all duration-400 ease-[cubic-bezier(0.175,0.885,0.32,1.275)] hover:scale-105 hover:-rotate-1 bg-[#ff0099]">
+            <iconify-icon icon="lucide:github"></iconify-icon>
+          </a>
+          <a :href="linkedinHref" class="w-12 h-12 border-[4px] border-black flex items-center justify-center transition-all duration-400 ease-[cubic-bezier(0.175,0.885,0.32,1.275)] hover:scale-105 hover:-rotate-1 bg-[#7000ff]">
+            <iconify-icon icon="lucide:linkedin" class="text-white"></iconify-icon>
+          </a>
+        </div>
+      </div>
+      <div class="flex flex-col text-right font-black lowercase text-2xl md:text-4xl">
+        <a :href="workHref" class="hover:underline text-[#ff0099]">work</a>
+        <a :href="labHref" class="hover:underline text-[#ccff00]">the lab</a>
+        <a :href="aboutHref" class="hover:underline text-[#7000ff]">me</a>
+        <a :href="contactHref" class="hover:underline">hi</a>
+      </div>
+    </div>
+    <div class="mt-20 pt-8 border-t-[4px] border-black flex justify-between items-center lowercase font-bold">
+      <p>© 2024 trailblazer labs</p>
+      <p>building intelligent clouds.</p>
+    </div>
+  </div>
+</footer>
+</div>
+<!-- /component: FooterSection (96434f60-3b0a-4aee-bd19-5f55fcdd71b7) -->
+
+    </div>
+
+    <!-- Extra Floating Stickers Globally -->
+    <div class="fixed inset-0 pointer-events-none z-[80] overflow-hidden" data-sd-id="126">
+        <div class="sticker-card float absolute top-[10%] right-[30%] rotate-[15deg] scale-125" style="animation-duration: 8s;" data-sd-id="127">
+            <iconify-icon icon="noto:alien" class="text-2xl"></iconify-icon>
+        </div>
+        <div class="sticker-card float absolute bottom-[15%] left-[40%] rotate-[-10deg]" style="animation-duration: 10s; animation-delay: 3s;" data-sd-id="128">
+            <iconify-icon icon="noto:fire" class="text-2xl"></iconify-icon>
+        </div>
+        <div class="sticker-card float absolute top-[60%] left-[5%] rotate-[20deg]" style="animation-duration: 7s; animation-delay: 1s;" data-sd-id="129">
+            <iconify-icon icon="noto:zap" class="text-2xl"></iconify-icon>
+        </div>
+    </div>
+
+
+</body></html>
